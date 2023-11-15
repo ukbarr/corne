@@ -1,0 +1,38 @@
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+
+#define BASE 0
+#define NAV 1
+#define NUM 2
+#define BT 3
+
+/ {
+  keymap {
+    compatible = "zmk,keymap";
+
+    Base_layer {
+      bindings = <
+        &kp A &kp Z &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp Q &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp M &kp ESCAPE &kp W &kp X &kp C &trans &none &kp V &kp B &kp N &none &kp LEFT_GUI &none &kp SPACE &kp RETURN &none &kp RIGHT_ALT 
+      >;
+    };
+
+    nav_layer {
+      bindings = <
+        &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none 
+      >;
+    };
+
+    num_layer {
+      bindings = <
+        &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none 
+      >;
+    };
+
+    bt_layer {
+      bindings = <
+        &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none &none 
+      >;
+    };
+
+  };
+};
