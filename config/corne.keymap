@@ -71,8 +71,9 @@
       timeout-ms = <30>;
       key-positions = <2 8>;
       bindings = <&OE>;
-    };*/
+    };
   };
+  */
 
   // ======
   // KEYMAP
@@ -82,18 +83,18 @@
 
     base_layer {
       bindings = <
-        &kp A      &kp Z &kp E &kp R &kp T        &kp Y         &kp U &kp I &kp O &kp P
-        &kp Q      &kp S &kp D &kp F &kp G        &kp H         &kp J &kp K &kp L &kp M 
-        &kp ESCAPE &kp W &kp X &kp C &kp TAB      &kp BACKSPACE &kp V &kp B &kp N &kp DELETE 
+        &none &kp A      &kp Z &kp E &kp R &kp T        &kp Y         &kp U &kp I &kp O &kp P &none
+        &none &kp Q      &kp S &kp D &kp F &kp G        &kp H         &kp J &kp K &kp L &kp M &none
+        &none &kp ESCAPE &kp W &kp X &kp C &kp TAB      &kp BACKSPACE &kp V &kp B &kp N &kp DELETE &none
         &mo L_NUM &none &kp SPACE             &kp ENTER &none &mo L_NUM 
       >;
     };
 
     num_layer {
       bindings = <
-        &kp A      &kp Z &kp FR_EACU &kp R &kp T        &kp Y         &kp U &kp I &kp O &kp P
-        &kp Q      &kp S &kp D &kp F &kp G        &kp H         &kp J &kp K &kp L &kp M 
-        &kp ESCAPE &kp W &kp X &kp C &kp TAB      &kp BACKSPACE &kp V &kp B &kp N &kp DELETE 
+        &none &kp A      &kp Z &kp FR_EACU &kp R &kp T        &kp Y         &kp U &kp I &kp O &kp P &none
+        &none &kp Q      &kp S &kp D &kp F &kp G              &kp H         &kp J &kp K &kp L &kp M &none
+        &none &kp ESCAPE &kp W &kp X &kp C &kp TAB            &kp BACKSPACE &kp V &kp B &kp N &kp DELETE &none
         &none &none &kp SPACE             &kp ENTER &none &none 
       >;
     };
