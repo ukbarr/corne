@@ -41,7 +41,7 @@
   // ========
   // BEHAVIOR
   // ========
-  behaviors {
+  /*behaviors {
     single_quote_backquote: hold-tap {
       compatible = "zmk,behavior-hold-tap";
       label = "SINGLE_QUOTE_BACKQUOTE";
@@ -50,18 +50,18 @@
       tapping-term-ms = <200>;
       bindings = <&kp>, <&kp>;
     };
-  };
+  };*/
 
   // =====
   // COMBO
   // =====
-  combos {
+  /*combos {
     compatible = "zmk,combos";
     combo_esc {
       timeout-ms = <30>;
       key-positions = <0 1>;
       bindings = <&kp ESC>;
-    };/*
+    };
     combo_ae {
       timeout-ms = <30>;
       key-positions = <0 2>;
@@ -85,7 +85,7 @@
         &kp A      &kp Z &kp E &kp R &kp T        &kp Y         &kp U &kp I &kp O &kp P
         &kp Q      &kp S &kp D &kp F &kp G        &kp H         &kp J &kp K &kp L &kp M 
         &kp ESCAPE &kp W &kp X &kp C &kp TAB      &kp BACKSPACE &kp V &kp B &kp N &kp DELETE 
-        &mo L_NUM &mo L_NAV &kp SPACE             &kp ENTER &mo L_NAV &mo L_NUM 
+        &mo L_NUM &none &kp SPACE             &kp ENTER &none &mo L_NUM 
       >;
     };
 
@@ -94,29 +94,8 @@
         &kp A      &kp Z &kp FR_EACU &kp R &kp T        &kp Y         &kp U &kp I &kp O &kp P
         &kp Q      &kp S &kp D &kp F &kp G        &kp H         &kp J &kp K &kp L &kp M 
         &kp ESCAPE &kp W &kp X &kp C &kp TAB      &kp BACKSPACE &kp V &kp B &kp N &kp DELETE 
-        &mo L_NUM &mo L_NAV &kp SPACE             &kp ENTER &mo L_NAV &mo L_NUM 
+        &none &none &kp SPACE             &kp ENTER &none &none 
       >;
     };
-/*
-    num_layer {
-      bindings = <
-        &kp AMPERSAND &kp DOUBLE_QUOTES &single_quote_backquote &kp HASH &kp TILDE      &kp 
-
-        &kp NUMBER_1 &kp NUMBER_2 &kp NUMBER_3 &kp NUMBER_4 &kp NUMBER_5    &kp NUMBER_6 &kp NUMBER_7 &kp NUMBER_8 &kp NUMBER_9 &kp NUMBER_0 
-        &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5    &kp LEFT_ARROW &kp DOWN_ARROW &kp UP_ARROW &kp RIGHT_ARROW &trans 
-        &trans &trans &trans &trans &trans                                  &trans &trans &trans &trans &trans 
-        &kp LEFT_GUI &trans &kp RETURN                                      &kp SPACE &trans &kp RIGHT_ALT 
-      >;
-    };
-
-    nav_layer {
-      bindings = <
-        &kp EXCLAMATION &kp AT_SIGN &kp HASH &kp DOLLAR &kp PERCENT          &kp CARET &kp AMPERSAND &kp ASTERISK &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS
-        &trans &trans &trans &trans &trans                                   &kp MINUS &kp EQUAL &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp BACKSLASH 
-        &trans &trans &trans &trans &trans                                   &kp UNDERSCORE &kp PLUS &kp LEFT_BRACE &kp RIGHT_BRACE &kp PIPE 
-        &kp LEFT_GUI &trans &kp SPACE                                        &kp RETURN &trans &kp RIGHT_ALT 
-      >;
-    };
-*/
   };
 };
