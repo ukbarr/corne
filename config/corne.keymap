@@ -87,13 +87,13 @@
 
     nav_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_AMPR         /* 02 */ &kp FR_DQUO         /* 03 */ &mt FR_QUOT FR_BSLS /* 04 */ &mt FR_HASH FR_TILD /* 05 */ &none
-/* RIGHT */             /* 06 */ &mt FR_EACU FR_EGRV /* 07 */ &kp FR_AGRV         /* 08 */ &kp FR_UGRV         /* 09 */ &kp FR_CCED         /* 10 */ &none               /* NA 11 */ NA
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_AMPR         /* 02 */ &kp FR_DQUO         /* 03 */ &mt FR_BSLS FR_QUOT /* 04 */ &mt FR_HASH FR_TILD /* 05 */ &none
+/* RIGHT */             /* 06 */ &mt FR_EGRV FR_EACU /* 07 */ &kp FR_AGRV         /* 08 */ &kp FR_UGRV         /* 09 */ &kp FR_CCED         /* 10 */ &none               /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_PIPE         /* 14 */ &mt FR_DLR FR_EURO /* 15 */ &mt FR_COMM FR_SCLN /* 16 */ &kp FR_COLN         /* 17 */ &mt FR_QUES FR_EXLM
-/* RIGHT */             /* 18 */ &none               /* 19 */ &mt HOME PAGE_UP    /* 20 */ &kp UP              /* 21 */ &mt END PAGE_DOWN   /* 22 */ &none               /* NA 23 */ NA
+/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_PIPE         /* 14 */ &mt FR_EURO FR_DLR  /* 15 */ &mt FR_SCLN FR_COMM /* 16 */ &kp FR_COLN         /* 17 */ &mt FR_EXLM FR_QUES
+/* RIGHT */             /* 18 */ &none               /* 19 */ &mt PAGE_UP HOME    /* 20 */ &kp UP              /* 21 */ &mt PAGE_DOWN END   /* 22 */ &none               /* NA 23 */ NA
 
-/* LEFT  */ /* 24 */ NA /* 25 */ &none               /* 26 */ &none               /* 27 */ &mt FR_CIRC FR_DIAE /* 28 */ &none               /* 29 */ &none
+/* LEFT  */ /* 24 */ NA /* 25 */ &none               /* 26 */ &none               /* 27 */ &mt FR_DIAE FR_CIRC /* 28 */ &none               /* 29 */ &none
 /* RIGHT */             /* 30 */ &trans              /* 31 */ &kp LEFT            /* 32 */ &kp DOWN            /* 33 */ &kp RIGHT           /* 34 */ &trans              /* NA 35 */ NA
 
 
@@ -104,11 +104,11 @@
 
     num_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &mt F1 F2     /* 02 */ &mt F3 F4       /* 03 */ &mt F5 F6        /* 04 */ &mt F7 F8        /* 05 */ &mt F9 F10
-/* RIGHT */             /* 06 */ &mt F11 F12   /* 07 */ &kp FR_7        /* 08 */ &kp FR_8         /* 09 */ &kp FR_9         /* 10 */ &none                 /* NA 11 */ NA
+/* LEFT  */ /* 00 */ NA /* 01 */ &mt F2 F1     /* 02 */ &mt F4 F3       /* 03 */ &mt F6 F5        /* 04 */ &mt F8 F9        /* 05 */ &mt F10 F9
+/* RIGHT */             /* 06 */ &mt F12 F11   /* 07 */ &kp FR_7        /* 08 */ &kp FR_8         /* 09 */ &kp FR_9         /* 10 */ &none                 /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &none         /* 14 */ &none           /* 15 */ &kp ASTERISK     /* 16 */ &kp FR_PLUS      /* 17 */ &mt FR_MINS FR_UNDS
-/* RIGHT */             /* 18 */ &kp FR_0      /* 19 */ &kp FR_4        /* 20 */ &kp FR_5         /* 21 */ &kp FR_6         /* 22 */ &mt FR_SLSH BACKSLASH /* NA 23 */ NA
+/* LEFT  */ /* 12 */ NA /* 13 */ &none         /* 14 */ &none           /* 15 */ &kp ASTERISK     /* 16 */ &kp FR_PLUS      /* 17 */ &mt FR_UNDS FR_MINS
+/* RIGHT */             /* 18 */ &kp FR_0      /* 19 */ &kp FR_4        /* 20 */ &kp FR_5         /* 21 */ &kp FR_6         /* 22 */ &mt BACKSLASH FR_SLSH /* NA 23 */ NA
 
 /* LEFT  */ /* 24 */ NA /* 25 */ &none         /* 26 */ &none           /* 27 */ &kp FR_DOT       /* 28 */ &kp FR_PERC      /* 29 */ &none
 /* RIGHT */             /* 30 */ &trans        /* 31 */ &kp FR_1        /* 32 */ &kp FR_2         /* 33 */ &kp FR_3         /* 34 */ &trans                /* NA 35 */ NA
