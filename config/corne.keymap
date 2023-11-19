@@ -47,6 +47,36 @@
   };
 
   // =====
+  // MACRO
+  // =====
+  macros {
+    mc_lt: mc_lt {
+      label = "mc_lt";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+        = <&macro_press &kp LALT>
+        , <&macro_tap &kp KP_N6>
+        , <&macro_wait_time 50>
+        , <&macro_tap &kp KP_N0>
+        , <&macro_release &kp LALT>
+        ;
+    };
+    mc_gt: mc_gt {
+      label = "mc_gt";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+        = <&macro_press &kp LALT>
+        , <&macro_tap &kp KP_N6>
+        , <&macro_wait_time 50>
+        , <&macro_tap &kp KP_N2>
+        , <&macro_release &kp LALT>
+        ;
+    };
+  };
+
+  // =====
   // COMBO
   // =====
   combos {
@@ -84,12 +114,12 @@
     combo_7 { // <
       timeout-ms = <30>;
       key-positions = <20 31>;
-      bindings = <&kp LT>;
+      bindings = <&mc_lt>;
     };
     combo_8 { // >
       timeout-ms = <30>;
       key-positions = <20 33>;
-      bindings = <&kp GT>;
+      bindings = <&mc_gt>;
     };
     combo_9 { // cut
       timeout-ms = <30>;
