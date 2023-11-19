@@ -94,17 +94,17 @@
     combo_9 { // cut
       timeout-ms = <30>;
       key-positions = <27 29>;
-      bindings = <&kp LC(FR_X)>;
+      bindings = <&kp LG(FR_X)>;
     };
     combo_10 { // copy
       timeout-ms = <30>;
       key-positions = <27 28>;
-      bindings = <&kp LC(FR_C)>;
+      bindings = <&kp LG(FR_C)>;
     };
     combo_11 { // paste
       timeout-ms = <30>;
       key-positions = <28 29>;
-      bindings = <&kp LC(FR_V)>;
+      bindings = <&kp LG(FR_V)>;
     };
   };
 
