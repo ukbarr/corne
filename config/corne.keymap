@@ -61,6 +61,51 @@
       key-positions = <8 9>;
       bindings = <&kp FR_LPRN>;
     };
+    combo_3 { // [
+      timeout-ms = <30>;
+      key-positions = <19 20>;
+      bindings = <&kp FR_LBRC>;
+    };
+    combo_4 { // ]
+      timeout-ms = <30>;
+      key-positions = <20 21>;
+      bindings = <&kp FR_RBRC>;
+    };
+    combo_5 { // {
+      timeout-ms = <30>;
+      key-positions = <31 32>;
+      bindings = <&kp FR_LCBR>;
+    };
+    combo_6 { // }
+      timeout-ms = <30>;
+      key-positions = <32 33>;
+      bindings = <&kp FR_RCBR>;
+    };
+    combo_7 { // <
+      timeout-ms = <30>;
+      key-positions = <20 31>;
+      bindings = <&kp FR_LABK>;
+    };
+    combo_8 { // >
+      timeout-ms = <30>;
+      key-positions = <20 33>;
+      bindings = <&kp FR_RABK>;
+    };
+    combo_9 { // cut
+      timeout-ms = <30>;
+      key-positions = <27 29>;
+      bindings = <&kp LG(FR_X)>;
+    };
+    combo_10 { // copy
+      timeout-ms = <30>;
+      key-positions = <27 28>;
+      bindings = <&kp LG(FR_C)>;
+    };
+    combo_11 { // paste
+      timeout-ms = <30>;
+      key-positions = <28 29>;
+      bindings = <&kp LG(FR_V)>;
+    };
   };
 
   // ======
