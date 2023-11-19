@@ -1,5 +1,5 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/keys.h>
+// #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
 #include "keymap_french.h"
@@ -90,7 +90,7 @@
 /* LEFT  */ /* 00 */ NA /* 01 */ &none         /* 02 */ &none         /* 03 */ &none /* 04 */ &none /* 05 */ &none
 /* RIGHT */             /* 06 */ &none /* 07 */ &none         /* 08 */ &none         /* 09 */ &none         /* 10 */ &none               /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_PIPE         /* 14 */ &mt FR_DLR FR_EURO  /* 15 */ &mt FR_COMM FR_SCLN /* 16 */ &kp FR_COLN         /* 17 */ &mt FR_QUES FR_EXLM
+/* LEFT  */ /* 12 */ NA /* 13 */ &none         /* 14 */ &kp FR_DLR /* 15 */ &mt FR_COMM FR_SCLN /* 16 */ &kp FR_COLN         /* 17 */ &mt FR_QUES FR_EXLM
 /* RIGHT */             /* 18 */ &none               /* 19 */ &mt HOME PAGE_UP    /* 20 */ &kp UP              /* 21 */ &mt END PAGE_DOWN   /* 22 */ &none               /* NA 23 */ NA
 
 /* LEFT  */ /* 24 */ NA /* 25 */ &none               /* 26 */ &none               /* 27 */ &mt FR_CIRC FR_DIAE /* 28 */ &none               /* 29 */ &none
