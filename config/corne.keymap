@@ -49,25 +49,19 @@
   // =====
   // COMBO
   // =====
-  /*combos {
+  combos {
     compatible = "zmk,combos";
-    combo_esc {
+    combo_1 { // (
       timeout-ms = <30>;
-      key-positions = <0 1>;
-      bindings = <&kp ESC>;
+      key-positions = <7 8>;
+      bindings = <&kp FR_LPRN>;
     };
-    combo_ae {
+    combo_2 { // )
       timeout-ms = <30>;
-      key-positions = <0 2>;
-      bindings = <&AE>;
-    };
-    combo_oe {
-      timeout-ms = <30>;
-      key-positions = <2 8>;
-      bindings = <&OE>;
+      key-positions = <8 9>;
+      bindings = <&kp FR_LPRN>;
     };
   };
-  */
 
   // ======
   // KEYMAP
