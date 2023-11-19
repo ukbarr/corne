@@ -84,12 +84,12 @@
     combo_7 { // <
       timeout-ms = <30>;
       key-positions = <20 31>;
-      bindings = <&kp FR_LABK>;
+      bindings = <&kp LT>;
     };
     combo_8 { // >
       timeout-ms = <30>;
       key-positions = <20 33>;
-      bindings = <&kp FR_RABK>;
+      bindings = <&kp GT>;
     };
     combo_9 { // cut
       timeout-ms = <30>;
