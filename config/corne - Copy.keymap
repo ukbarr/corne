@@ -113,7 +113,6 @@
 /* LEFT  */ /* 24 */ NA /* 25 */ &none               /* 26 */ &none           /* 27 */ &kp FR_DOT       /* 28 */ &kp FR_PERC      /* 29 */ &none
 /* RIGHT */             /* 30 */ &trans              /* 31 */ &kp FR_1        /* 32 */ &kp FR_2         /* 33 */ &kp FR_3         /* 34 */ &trans                /* NA 35 */ NA
 
-
 /* LEFT  */ /* 36 */ &none      /* 37 */ &td_l_base           /* 38 */ &trans
 /* RIGHT */ /* 39 */ &trans     /* 40 */ &td_l_base           /* 41 */ &none 
       >;
