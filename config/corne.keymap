@@ -84,5 +84,22 @@
 /* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &td_l_nav   /* 41 */ &td_l_num 
       >;
     };
+
+    nav_layer {
+      bindings = <
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_AMPR         /* 02 */ &kp FR_DQUO         /* 03 */ &mt FR_QUOT FR_BSLS /* 04 */ &mt FR_HASH FR_TILD /* 05 */ &none
+/* RIGHT */             /* 06 */ &mt FR_EACU FR_EGRV /* 07 */ &kp FR_AGRV         /* 08 */ &kp FR_UGRV         /* 09 */ &kp FR_CCED         /* 10 */ &none               /* NA 11 */ NA
+
+/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_PIPE         /* 14 */ &mt FR_DLR FR_EURO  /* 15 */ &mt FR_COMM FR_SCLN /* 16 */ &kp FR_COLN         /* 17 */ &mt FR_QUES FR_EXLM
+/* RIGHT */             /* 18 */ &none               /* 19 */ &mt HOME PAGE_UP    /* 20 */ &kp UP              /* 21 */ &mt END PAGE_DOWN   /* 22 */ &none               /* NA 23 */ NA
+
+/* LEFT  */ /* 24 */ NA /* 25 */ &none               /* 26 */ &none               /* 27 */ &mt FR_CIRC FR_DIAE /* 28 */ &none               /* 29 */ &none
+/* RIGHT */             /* 30 */ &trans              /* 31 */ &kp LEFT            /* 32 */ &kp DOWN            /* 33 */ &kp RIGHT           /* 34 */ &trans              /* NA 35 */ NA
+
+
+/* LEFT  */ /* 36 */ &none      /* 37 */ &td_l_base           /* 38 */ &trans
+/* RIGHT */ /* 39 */ &trans     /* 40 */ &td_l_base           /* 41 */ &none 
+      >;
+    };
   };
 };
