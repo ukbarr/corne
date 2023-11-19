@@ -101,5 +101,22 @@
 /* RIGHT */ /* 39 */ &trans     /* 40 */ &td_l_base           /* 41 */ &none 
       >;
     };
+
+    num_layer {
+      bindings = <
+/* LEFT  */ /* 00 */ NA /* 01 */ &mt F1 F2     /* 02 */ &mt F3 F4       /* 03 */ &mt F5 F6        /* 04 */ &mt F7 F8        /* 05 */ &mt F9 F10
+/* RIGHT */             /* 06 */ &mt F11 F12   /* 07 */ &kp FR_7        /* 08 */ &kp FR_8         /* 09 */ &kp FR_9         /* 10 */ &none                 /* NA 11 */ NA
+
+/* LEFT  */ /* 12 */ NA /* 13 */ &none         /* 14 */ &none           /* 15 */ &kp ASTERISK     /* 16 */ &kp FR_PLUS      /* 17 */ &mt FR_MINS FR_UNDS
+/* RIGHT */             /* 18 */ &kp FR_0      /* 19 */ &kp FR_4        /* 20 */ &kp FR_5         /* 21 */ &kp FR_6         /* 22 */ &mt FR_SLSH BACKSLASH /* NA 23 */ NA
+
+/* LEFT  */ /* 24 */ NA /* 25 */ &none         /* 26 */ &none           /* 27 */ &kp FR_DOT       /* 28 */ &kp FR_PERC      /* 29 */ &none
+/* RIGHT */             /* 30 */ &trans        /* 31 */ &kp FR_1        /* 32 */ &kp FR_2         /* 33 */ &kp FR_3         /* 34 */ &trans                /* NA 35 */ NA
+
+
+/* LEFT  */ /* 36 */ &none      /* 37 */ &td_l_base           /* 38 */ &trans
+/* RIGHT */ /* 39 */ &trans     /* 40 */ &td_l_base           /* 41 */ &none 
+      >;
+    };
   };
 };
