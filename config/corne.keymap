@@ -44,6 +44,15 @@
       tapping-term-ms = <200>;
       bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>;
     };
+    hm: homerow_mods {
+      compatible = "zmk,behavior-hold-tap";
+      label = "HOMEROW_MODS";
+      #binding-cells = <2>;
+      tapping-term-ms = <150>;
+      quick-tap-ms = <0>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
   };
 
   // =====
@@ -146,14 +155,14 @@
 
     base_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_A       /* 02 */ &kp FR_Z           /* 03 */ &kp FR_E        /* 04 */ &kp FR_R        /* 05 */ &kp FR_T
-/* RIGHT */             /* 06 */ &kp FR_Y       /* 07 */ &kp FR_U           /* 08 */ &kp FR_I        /* 09 */ &kp FR_O        /* 10 */ &kp FR_P    /* NA 11 */ NA
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_A          /* 02 */ &kp FR_Z              /* 03 */ &kp FR_E           /* 04 */ &kp FR_R           /* 05 */ &kp FR_T
+/* RIGHT */             /* 06 */ &kp FR_Y          /* 07 */ &kp FR_U              /* 08 */ &kp FR_I           /* 09 */ &kp FR_O           /* 10 */ &kp FR_P         /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_Q       /* 14 */ &mt LSHIFT FR_S    /* 15 */ &mt LCTRL FR_D  /* 16 */ &mt LALT FR_F   /* 17 */ &mt LCMD FR_G
-/* RIGHT */             /* 18 */ &mt LCMD FR_H  /* 19 */ &mt LALT FR_J      /* 20 */ &mt LCTRL FR_K  /* 21 */ &mt LSHIFT FR_L /* 22 */ &kp FR_M    /* NA 23 */ NA
+/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_Q          /* 14 */ &hm LSHIFT FR_S    /* 15 */ &hm LCTRL FR_D  /* 16 */ &hm LALT FR_F   /* 17 */ &hm LCMD FR_G
+/* RIGHT */             /* 18 */ &hm LCMD FR_H  /* 19 */ &hm LALT FR_J      /* 20 */ &hm LCTRL FR_K  /* 21 */ &hm LSHIFT FR_L /* 22 */ &kp FR_M         /* NA 23 */ NA
 
-/* LEFT  */ /* 24 */ NA /* 25 */ &kp ESCAPE     /* 26 */ &kp FR_W           /* 27 */ &kp FR_X        /* 28 */ &kp FR_C        /* 29 */ &mt INSERT TAB
-/* RIGHT */             /* 30 */ &kp BACKSPACE  /* 31 */ &kp FR_V           /* 32 */ &kp FR_B        /* 33 */ &kp FR_N        /* 34 */ &kp DELETE  /* NA 35 */ NA
+/* LEFT  */ /* 24 */ NA /* 25 */ &kp ESCAPE        /* 26 */ &kp FR_W              /* 27 */ &kp FR_X           /* 28 */ &kp FR_C           /* 29 */ &hm INSERT TAB
+/* RIGHT */             /* 30 */ &kp BACKSPACE     /* 31 */ &kp FR_V              /* 32 */ &kp FR_B           /* 33 */ &kp FR_N           /* 34 */ &kp DELETE       /* NA 35 */ NA
 
 
 /* LEFT  */ /* 36 */ &td_l_num      /* 37 */ &td_l_nav   /* 38 */ &kp SPACE
@@ -163,14 +172,14 @@
 
     nav_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &td_bt              /* 02 */ &mt C_MUTE C_VOL_DN /* 03 */ &mt C_MUTE C_VOL_UP /* 04 */ &none               /* 05 */ &none
-/* RIGHT */             /* 06 */ &mt FR_EGRV FR_EACU /* 07 */ &mt FR_AT FR_AGRV   /* 08 */ &kp FR_UGRV         /* 09 */ &kp FR_CCED         /* 10 */ &none               /* NA 11 */ NA
+/* LEFT  */ /* 00 */ NA /* 01 */ &td_bt                 /* 02 */ &hm C_MUTE C_VOL_DN /* 03 */ &hm C_MUTE C_VOL_UP /* 04 */ &none                  /* 05 */ &none
+/* RIGHT */             /* 06 */ &hm FR_EGRV FR_EACU /* 07 */ &hm FR_AT FR_AGRV   /* 08 */ &kp FR_UGRV            /* 09 */ &kp FR_CCED            /* 10 */ &none               /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &mt FR_EURO FR_DLR  /* 14 */ &mt LSHIFT FR_PIPE  /* 15 */ &mt LCTRL FR_COLN   /* 16 */ &mt LALT FR_AMPR    /* 17 */ &mt LCMD FR_DQUO
-/* RIGHT */             /* 18 */ &none               /* 19 */ &mt PAGE_UP HOME    /* 20 */ &kp UP              /* 21 */ &mt PAGE_DOWN END   /* 22 */ &none               /* NA 23 */ NA
+/* LEFT  */ /* 12 */ NA /* 13 */ &hm FR_EURO FR_DLR  /* 14 */ &hm LSHIFT FR_PIPE  /* 15 */ &hm LCTRL FR_COLN   /* 16 */ &hm LALT FR_AMPR    /* 17 */ &hm LCMD FR_DQUO
+/* RIGHT */             /* 18 */ &none                  /* 19 */ &hm PAGE_UP HOME    /* 20 */ &kp UP                 /* 21 */ &hm PAGE_DOWN END   /* 22 */ &none               /* NA 23 */ NA
 
-/* LEFT  */ /* 24 */ NA /* 25 */ &mt FR_TILD FR_HASH /* 26 */ &mt FR_EXLM FR_QUES /* 27 */ &mt FR_DIAE FR_CIRC /* 28 */ &mt FR_SCLN FR_COMM /* 29 */ &mt FR_GRV FR_QUOT
-/* RIGHT */             /* 30 */ &trans              /* 31 */ &kp LEFT            /* 32 */ &kp DOWN            /* 33 */ &kp RIGHT           /* 34 */ &trans              /* NA 35 */ NA
+/* LEFT  */ /* 24 */ NA /* 25 */ &hm FR_TILD FR_HASH /* 26 */ &hm FR_EXLM FR_QUES /* 27 */ &hm FR_DIAE FR_CIRC /* 28 */ &hm FR_SCLN FR_COMM /* 29 */ &hm FR_GRV FR_QUOT
+/* RIGHT */             /* 30 */ &trans                 /* 31 */ &kp LEFT               /* 32 */ &kp DOWN               /* 33 */ &kp RIGHT              /* 34 */ &trans              /* NA 35 */ NA
 
 
 /* LEFT  */ /* 36 */ &none      /* 37 */ &td_l_base           /* 38 */ &trans
@@ -180,14 +189,14 @@
 
     num_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &mt F2 F1     /* 02 */ &mt F4 F3           /* 03 */ &mt F6 F5             /* 04 */ &mt F8 F7        /* 05 */ &mt F10 F9
-/* RIGHT */             /* 06 */ &mt F12 F11   /* 07 */ &kp KP_N7           /* 08 */ &kp KP_N8             /* 09 */ &kp KP_N9        /* 10 */ &kp FR_EQL            /* NA 11 */ NA
+/* LEFT  */ /* 00 */ NA /* 01 */ &hm F2 F1     /* 02 */ &hm F4 F3           /* 03 */ &hm F6 F5             /* 04 */ &hm F8 F7         /* 05 */ &hm F10 F9
+/* RIGHT */             /* 06 */ &hm F12 F11   /* 07 */ &kp KP_N7              /* 08 */ &kp KP_N8                /* 09 */ &kp KP_N9            /* 10 */ &kp FR_EQL            /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &none         /* 14 */ &mt LSHIFT FR_PERC  /* 15 */ &mt LCTRL KP_MULTIPLY /* 16 */ &mt LALT FR_PLUS /* 17 */ &mt LCMD FR_MINS
-/* RIGHT */             /* 18 */ &kp KP_N0     /* 19 */ &kp KP_N4           /* 20 */ &kp KP_N5             /* 21 */ &kp KP_N6        /* 22 */ &mt FR_BSLS FR_SLSH   /* NA 23 */ NA
+/* LEFT  */ /* 12 */ NA /* 13 */ &none            /* 14 */ &hm LSHIFT FR_PERC  /* 15 */ &hm LCTRL KP_MULTIPLY /* 16 */ &hm LALT FR_PLUS  /* 17 */ &hm LCMD FR_MINS
+/* RIGHT */             /* 18 */ &kp KP_N0        /* 19 */ &kp KP_N4              /* 20 */ &kp KP_N5                /* 21 */ &kp KP_N6            /* 22 */ &hm FR_BSLS FR_SLSH   /* NA 23 */ NA
 
-/* LEFT  */ /* 24 */ NA /* 25 */ &none         /* 26 */ &none               /* 27 */ &kp FR_DEG            /* 28 */ &kp FR_DOT       /* 29 */ &kp FR_UNDS
-/* RIGHT */             /* 30 */ &trans        /* 31 */ &kp KP_N1           /* 32 */ &kp KP_N2             /* 33 */ &kp KP_N3        /* 34 */ &trans                /* NA 35 */ NA
+/* LEFT  */ /* 24 */ NA /* 25 */ &none            /* 26 */ &none                  /* 27 */ &kp FR_DEG               /* 28 */ &kp FR_DOT           /* 29 */ &kp FR_UNDS
+/* RIGHT */             /* 30 */ &trans           /* 31 */ &kp KP_N1              /* 32 */ &kp KP_N2                /* 33 */ &kp KP_N3            /* 34 */ &trans                /* NA 35 */ NA
 
 
 /* LEFT  */ /* 36 */ &none      /* 37 */ &td_l_base           /* 38 */ &trans
