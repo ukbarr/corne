@@ -186,17 +186,17 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &td_l_nav   /* 41 */ &td_l_num 
       >;
     };
-
+ 
     nav_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &td_bt                 /* 02 */ &mt C_MUTE C_VOL_DN /* 03 */ &mt C_MUTE C_VOL_UP /* 04 */ &none                  /* 05 */ &none
-/* RIGHT */             /* 06 */ &mt FR_EGRV FR_EACU /* 07 */ &mt FR_AT FR_AGRV   /* 08 */ &kp FR_UGRV            /* 09 */ &kp FR_CCED            /* 10 */ &none               /* NA 11 */ NA
+/* LEFT  */ /* 00 */ NA /* 01 */ &mt FR_AT FR_AGRV      /* 02 */ &mt FR_EXLM FR_QUES /* 03 */ &mt FR_EGRV FR_EACU     /* 04 */ &mt FR_SCLN FR_COMM    /* 05 */ &mt FR_GRV FR_QUOT
+/* RIGHT */             /* 06 */ &td_bt                 /* 07 */ &kp FR_UGRV         /* 08 */ &mt C_MUTE C_VOL_UP     /* 09 */ &mt C_MUTE C_VOL_DN    /* 10 */ &none               /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &hml FR_EURO FR_DLR  /* 14 */ &hml LSHIFT FR_PIPE  /* 15 */ &hml LCTRL FR_COLN   /* 16 */ &hml LALT FR_AMPR    /* 17 */ &hml LCMD FR_DQUO
-/* RIGHT */             /* 18 */ &none                  /* 19 */ &mt PAGE_UP HOME    /* 20 */ &kp UP                 /* 21 */ &mt PAGE_DOWN END   /* 22 */ &none               /* NA 23 */ NA
+/* LEFT  */ /* 12 */ NA /* 13 */ &hml FR_EURO FR_DLR    /* 14 */ &hml LSHIFT FR_PIPE  /* 15 */ &hml LCTRL FR_COLN     /* 16 */ &hml LALT FR_AMPR      /* 17 */ &hml LCMD FR_DQUO
+/* RIGHT */             /* 18 */ &none                  /* 19 */ &mt PAGE_UP HOME     /* 20 */ &kp UP                 /* 21 */ &mt PAGE_DOWN END      /* 22 */ &none               /* NA 23 */ NA
 
-/* LEFT  */ /* 24 */ NA /* 25 */ &mt FR_TILD FR_HASH /* 26 */ &mt FR_EXLM FR_QUES /* 27 */ &mt FR_DIAE FR_CIRC /* 28 */ &mt FR_SCLN FR_COMM /* 29 */ &mt FR_GRV FR_QUOT
-/* RIGHT */             /* 30 */ &trans                 /* 31 */ &kp LEFT               /* 32 */ &kp DOWN               /* 33 */ &kp RIGHT              /* 34 */ &trans              /* NA 35 */ NA
+/* LEFT  */ /* 24 */ NA /* 25 */ &mt FR_TILD FR_HASH    /* 26 */ &none                /* 27 */ &mt FR_DIAE FR_CIRC    /* 28 */ &kp FR_CCED            /* 29 */ &none
+/* RIGHT */             /* 30 */ &trans                 /* 31 */ &kp LEFT             /* 32 */ &kp DOWN               /* 33 */ &kp RIGHT              /* 34 */ &trans              /* NA 35 */ NA
 
 
 /* LEFT  */ /* 36 */ &none      /* 37 */ &td_l_base           /* 38 */ &trans
