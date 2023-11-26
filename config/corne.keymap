@@ -125,7 +125,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     };
     combo_cced { // ç
       timeout-ms = <30>;
-      key-positions = <28 29>;
+      key-positions = <15 28>;
       bindings = <&kp FR_CCED>;
     };
     
