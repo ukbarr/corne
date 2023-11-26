@@ -110,7 +110,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     // LEFT
     combo_agrv { // à
       timeout-ms = <30>;
-      key-positions = <1 13>;
+      key-positions = <1 2>;
       bindings = <&kp FR_AGRV>;
     };
     combo_egrv { // è
@@ -125,13 +125,8 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     };
     combo_cced { // ç
       timeout-ms = <30>;
-      key-positions = <16 28>;
+      key-positions = <15 28>;
       bindings = <&kp FR_CCED>;
-    };
-    combo_ugrv { // ù
-      timeout-ms = <30>;
-      key-positions = <7 19>;
-      bindings = <&kp FR_UGRV>;
     };
     
     combo_cut { // cut
@@ -151,6 +146,12 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     };
 
     // RIGHT
+    combo_ugrv { // ù
+      timeout-ms = <30>;
+      key-positions = <6 7>;
+      bindings = <&kp FR_UGRV>;
+    };
+
     combo_1 { // (
       timeout-ms = <30>;
       key-positions = <7 8>;
