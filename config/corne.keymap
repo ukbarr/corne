@@ -72,21 +72,21 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     };
     td_c: td_c { 
       compatible = "zmk,behavior-tap-dance";
-      label = "td_e";
+      label = "td_c";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&kp FR_C>, <&kp FR_CCED>;
     };
     td_a: td_a { 
       compatible = "zmk,behavior-tap-dance";
-      label = "td_e";
+      label = "td_a";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&kp FR_A>, <&kp FR_AGRV>;
     };
     td_u: td_u { 
       compatible = "zmk,behavior-tap-dance";
-      label = "td_e";
+      label = "td_u";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&kp FR_U>, <&kp FR_UGRV>;
@@ -210,7 +210,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
     base_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &ts_a             /* 02 */ &kp FR_Z              /* 03 */ &kp E              /* 04 */ &kp FR_R           /* 05 */ &kp FR_T
+/* LEFT  */ /* 00 */ NA /* 01 */ &td_a             /* 02 */ &kp FR_Z              /* 03 */ &kp E              /* 04 */ &kp FR_R           /* 05 */ &kp FR_T
 /* RIGHT */             /* 06 */ &kp FR_Y          /* 07 */ &td_u                 /* 08 */ &kp FR_I           /* 09 */ &kp FR_O           /* 10 */ &kp FR_P         /* NA 11 */ NA
 
 /* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_Q          /* 14 */ &hml LSHIFT FR_S      /* 15 */ &hml LCTRL FR_D    /* 16 */ &hml LALT FR_F     /* 17 */ &hml LCMD FR_G
