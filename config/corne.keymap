@@ -70,13 +70,16 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       tapping-term-ms = <200>;
       bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>;
     };
-    td_e: td_e {
+    // un peu lent
+    /*
+    td_e: td_e { 
       compatible = "zmk,behavior-tap-dance";
       label = "td_e";
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&kp E>, <&kp FR_EACU>, <&kp FR_EGRV>;
     };
+    */
   };
 
   // =====
@@ -114,46 +117,18 @@ ZMK_BEHAVIOR(hmr, hold_tap,
   // =====
   combos {
     compatible = "zmk,combos";
-    combo_1 { // (
+    // LEFT
+    combo_egrv { // è
       timeout-ms = <30>;
-      key-positions = <7 8>;
-      bindings = <&kp FR_LPRN>;
+      key-positions = <2 3>;
+      bindings = <&kp FR_EGRV>;
     };
-    combo_2 { // )
+    combo_eacu { // é
       timeout-ms = <30>;
-      key-positions = <8 9>;
-      bindings = <&kp FR_LPRN>;
+      key-positions = <3 4>;
+      bindings = <&kp FR_EACU>;
     };
-    combo_3 { // [
-      timeout-ms = <30>;
-      key-positions = <19 20>;
-      bindings = <&kp FR_LBRC>;
-    };
-    combo_4 { // ]
-      timeout-ms = <30>;
-      key-positions = <20 21>;
-      bindings = <&kp FR_RBRC>;
-    };
-    combo_5 { // {
-      timeout-ms = <30>;
-      key-positions = <31 32>;
-      bindings = <&kp FR_LCBR>;
-    };
-    combo_6 { // }
-      timeout-ms = <30>;
-      key-positions = <32 33>;
-      bindings = <&kp FR_RCBR>;
-    };
-    combo_7 { // <
-      timeout-ms = <30>;
-      key-positions = <20 31>;
-      bindings = <&mc_lt>;
-    };
-    combo_8 { // >
-      timeout-ms = <30>;
-      key-positions = <20 33>;
-      bindings = <&mc_gt>;
-    };
+    
     combo_9 { // cut
       timeout-ms = <30>;
       key-positions = <27 29>;
@@ -169,6 +144,51 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       key-positions = <28 29>;
       bindings = <&kp LG(FR_V)>;
     };
+
+    // RIGHT
+    combo_1 { // (
+      timeout-ms = <30>;
+      key-positions = <7 8>;
+      bindings = <&kp FR_LPRN>;
+    };
+    combo_2 { // )
+      timeout-ms = <30>;
+      key-positions = <8 9>;
+      bindings = <&kp FR_LPRN>;
+    };
+
+    combo_3 { // [
+      timeout-ms = <30>;
+      key-positions = <19 20>;
+      bindings = <&kp FR_LBRC>;
+    };
+    combo_4 { // ]
+      timeout-ms = <30>;
+      key-positions = <20 21>;
+      bindings = <&kp FR_RBRC>;
+    };
+
+    combo_5 { // {
+      timeout-ms = <30>;
+      key-positions = <31 32>;
+      bindings = <&kp FR_LCBR>;
+    };
+    combo_6 { // }
+      timeout-ms = <30>;
+      key-positions = <32 33>;
+      bindings = <&kp FR_RCBR>;
+    };
+
+    combo_7 { // <
+      timeout-ms = <30>;
+      key-positions = <20 31>;
+      bindings = <&mc_lt>;
+    };
+    combo_8 { // >
+      timeout-ms = <30>;
+      key-positions = <20 33>;
+      bindings = <&mc_gt>;
+    };
   };
 
   // ======
@@ -179,7 +199,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
     base_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_A          /* 02 */ &kp FR_Z              /* 03 */ &td_e              /* 04 */ &kp FR_R           /* 05 */ &kp FR_T
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_A          /* 02 */ &kp FR_Z              /* 03 */ &kp E              /* 04 */ &kp FR_R           /* 05 */ &kp FR_T
 /* RIGHT */             /* 06 */ &kp FR_Y          /* 07 */ &kp FR_U              /* 08 */ &kp FR_I           /* 09 */ &kp FR_O           /* 10 */ &kp FR_P         /* NA 11 */ NA
 
 /* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_Q          /* 14 */ &hml LSHIFT FR_S      /* 15 */ &hml LCTRL FR_D    /* 16 */ &hml LALT FR_F     /* 17 */ &hml LCMD FR_G
