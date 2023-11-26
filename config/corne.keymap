@@ -70,27 +70,6 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       tapping-term-ms = <200>;
       bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>;
     };
-    td_c: td_c { 
-      compatible = "zmk,behavior-tap-dance";
-      label = "td_c";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp FR_C>, <&kp FR_CCED>;
-    };
-    td_a: td_a { 
-      compatible = "zmk,behavior-tap-dance";
-      label = "td_a";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp FR_A>, <&kp FR_AGRV>;
-    };
-    td_u: td_u { 
-      compatible = "zmk,behavior-tap-dance";
-      label = "td_u";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&kp FR_U>, <&kp FR_UGRV>;
-    };
   };
 
   // =====
@@ -129,6 +108,11 @@ ZMK_BEHAVIOR(hmr, hold_tap,
   combos {
     compatible = "zmk,combos";
     // LEFT
+    combo_agrv { // à
+      timeout-ms = <30>;
+      key-positions = <1 13>;
+      bindings = <&kp FR_AGRV>;
+    };
     combo_egrv { // è
       timeout-ms = <30>;
       key-positions = <2 3>;
@@ -139,18 +123,28 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       key-positions = <3 4>;
       bindings = <&kp FR_EACU>;
     };
+    combo_cced { // ç
+      timeout-ms = <30>;
+      key-positions = <16 28>;
+      bindings = <&kp FR_CCED>;
+    };
+    combo_ugrv { // ù
+      timeout-ms = <30>;
+      key-positions = <7 19>;
+      bindings = <&kp FR_UGRV>;
+    };
     
-    combo_9 { // cut
+    combo_cut { // cut
       timeout-ms = <30>;
       key-positions = <27 29>;
       bindings = <&kp LG(FR_X)>;
     };
-    combo_10 { // copy
+    combo_copy { // copy
       timeout-ms = <30>;
       key-positions = <27 28>;
       bindings = <&kp LG(FR_C)>;
     };
-    combo_11 { // paste
+    combo_paste { // paste
       timeout-ms = <30>;
       key-positions = <28 29>;
       bindings = <&kp LG(FR_V)>;
@@ -210,13 +204,13 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
     base_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &td_a             /* 02 */ &kp FR_Z              /* 03 */ &kp E              /* 04 */ &kp FR_R           /* 05 */ &kp FR_T
-/* RIGHT */             /* 06 */ &kp FR_Y          /* 07 */ &td_u                 /* 08 */ &kp FR_I           /* 09 */ &kp FR_O           /* 10 */ &kp FR_P         /* NA 11 */ NA
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_A          /* 02 */ &kp FR_Z              /* 03 */ &kp FR_E           /* 04 */ &kp FR_R           /* 05 */ &kp FR_T
+/* RIGHT */             /* 06 */ &kp FR_Y          /* 07 */ &kp FR_U              /* 08 */ &kp FR_I           /* 09 */ &kp FR_O           /* 10 */ &kp FR_P         /* NA 11 */ NA
 
 /* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_Q          /* 14 */ &hml LSHIFT FR_S      /* 15 */ &hml LCTRL FR_D    /* 16 */ &hml LALT FR_F     /* 17 */ &hml LCMD FR_G
 /* RIGHT */             /* 18 */ &hmr LCMD FR_H    /* 19 */ &hmr LALT FR_J        /* 20 */ &hmr LCTRL FR_K    /* 21 */ &hmr LSHIFT FR_L   /* 22 */ &kp FR_M         /* NA 23 */ NA
 
-/* LEFT  */ /* 24 */ NA /* 25 */ &kp ESCAPE        /* 26 */ &kp FR_W              /* 27 */ &kp FR_X           /* 28 */ &td_c              /* 29 */ &mt INSERT TAB
+/* LEFT  */ /* 24 */ NA /* 25 */ &kp ESCAPE        /* 26 */ &kp FR_W              /* 27 */ &kp FR_X           /* 28 */ &kp FR_C           /* 29 */ &mt INSERT TAB
 /* RIGHT */             /* 30 */ &kp BACKSPACE     /* 31 */ &kp FR_V              /* 32 */ &kp FR_B           /* 33 */ &kp FR_N           /* 34 */ &kp DELETE       /* NA 35 */ NA
 
 
