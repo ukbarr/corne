@@ -125,23 +125,23 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     };
     combo_cced { // ç
       timeout-ms = <30>;
-      key-positions = <15 28>;
+      key-positions = <15 29>;
       bindings = <&kp FR_CCED>;
     };
     
-    combo_cut { // cut
-      timeout-ms = <30>;
-      key-positions = <27 29>;
-      bindings = <&kp LG(FR_X)>;
-    };
     combo_copy { // copy
       timeout-ms = <30>;
-      key-positions = <27 28>;
+      key-positions = <26 28>;
       bindings = <&kp LG(FR_C)>;
+    };
+    combo_cut { // cut
+      timeout-ms = <30>;
+      key-positions = <26 27>;
+      bindings = <&kp LG(FR_X)>;
     };
     combo_paste { // paste
       timeout-ms = <30>;
-      key-positions = <28 29>;
+      key-positions = <27 28>;
       bindings = <&kp LG(FR_V)>;
     };
 
