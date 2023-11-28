@@ -74,7 +74,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       compatible = "zmk,behavior-tap-dance";
       label = "td_cc";
       #binding-cells = <0>;
-      tapping-term-ms = <500>;
+      tapping-term-ms = <350>;
       bindings = <&kp FR_C>, <&kp FR_CCED>;
     };
   };
@@ -82,7 +82,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       compatible = "zmk,behavior-tap-dance";
       label = "td_comma";
       #binding-cells = <0>;
-      tapping-term-ms = <200>;
+      tapping-term-ms = <350>;
       bindings = <&kp FR_COMM>, <&kp FR_SCLN>;
     };
  
