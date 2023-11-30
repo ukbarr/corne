@@ -101,7 +101,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     };
     td_slash: td_hash { // # ~
       compatible = "zmk,behavior-tap-dance";
-      label = "td_hash";
+      label = "td_slash";
       #binding-cells = <0>;
       tapping-term-ms = <350>;
       bindings = <&kp FR_SLSH>, <&kp FR_BSLS>;
