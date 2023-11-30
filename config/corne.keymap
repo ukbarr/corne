@@ -85,7 +85,41 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       tapping-term-ms = <350>;
       bindings = <&kp FR_COMM>, <&kp FR_SCLN>;
     };
- 
+    td_question: td_question { // ? !
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_question";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp FR_QUES>, <&kp FR_EXLM>;
+    };
+    td_hash: td_hash { // # ~
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_hash";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp FR_HASH>, <&kp FR_TILD>;
+    };
+    td_slash: td_hash { // # ~
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_hash";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp FR_SLSH>, <&kp FR_BSLS>;
+    };
+    td_quote: td_quote { // ' `
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_quote";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp FR_QUOT>, <&kp FR_GRV>;
+    };
+    td_dollars: td_dollars { // $ €
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_dollars";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp FR_DLR>, <&kp FR_EURO>;
+    };
   // =====
   // MACRO
   // =====
@@ -231,13 +265,13 @@ ZMK_BEHAVIOR(hmr, hold_tap,
  
     nav_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_AT              /* 02 */ &mt FR_EXLM FR_QUES /* 03 */ &none                   /* 04 */ &td_comma              /* 05 */ &mt FR_GRV FR_QUOT
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_AT              /* 02 */ &td_question        /* 03 */ &td_hash                /* 04 */ &td_comma              /* 05 */ &td_quote
 /* RIGHT */             /* 06 */ &td_bt                 /* 07 */ &none               /* 08 */ &mt C_MUTE C_VOL_UP     /* 09 */ &mt C_MUTE C_VOL_DN    /* 10 */ &none               /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &hml FR_EURO FR_DLR    /* 14 */ &hml LSHIFT FR_PIPE  /* 15 */ &hml LCTRL FR_COLN     /* 16 */ &hml LALT FR_AMPR      /* 17 */ &hml LCMD FR_DQUO
+/* LEFT  */ /* 12 */ NA /* 13 */ &td_dollars            /* 14 */ &hml LSHIFT FR_PIPE  /* 15 */ &hml LCTRL FR_COLN     /* 16 */ &hml LALT FR_AMPR      /* 17 */ &hml LCMD FR_DQUO
 /* RIGHT */             /* 18 */ &none                  /* 19 */ &mt PAGE_UP HOME     /* 20 */ &kp UP                 /* 21 */ &mt PAGE_DOWN END      /* 22 */ &none               /* NA 23 */ NA
 
-/* LEFT  */ /* 24 */ NA /* 25 */ &mt FR_TILD FR_HASH    /* 26 */ &none                /* 27 */ &mt FR_DIAE FR_CIRC    /* 28 */ &none                  /* 29 */ &none
+/* LEFT  */ /* 24 */ NA /* 25 */ &none                  /* 26 */ &none                /* 27 */ &mt FR_DIAE FR_CIRC    /* 28 */ &none                  /* 29 */ &none
 /* RIGHT */             /* 30 */ &trans                 /* 31 */ &kp LEFT             /* 32 */ &kp DOWN               /* 33 */ &kp RIGHT              /* 34 */ &trans              /* NA 35 */ NA
 
 
@@ -252,7 +286,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* RIGHT */             /* 06 */ &mt F12 F11      /* 07 */ &kp KP_N7              /* 08 */ &kp KP_N8                /* 09 */ &kp KP_N9            /* 10 */ &kp FR_EQL            /* NA 11 */ NA
 
 /* LEFT  */ /* 12 */ NA /* 13 */ &none            /* 14 */ &hml LSHIFT FR_PERC    /* 15 */ &hml LCTRL KP_MULTIPLY   /* 16 */ &hml LALT FR_PLUS    /* 17 */ &hml LCMD FR_MINS
-/* RIGHT */             /* 18 */ &kp KP_N0        /* 19 */ &kp KP_N4              /* 20 */ &kp KP_N5                /* 21 */ &kp KP_N6            /* 22 */ &mt FR_BSLS FR_SLSH   /* NA 23 */ NA
+/* RIGHT */             /* 18 */ &kp KP_N0        /* 19 */ &kp KP_N4              /* 20 */ &kp KP_N5                /* 21 */ &kp KP_N6            /* 22 */ &td_slash             /* NA 23 */ NA
 
 /* LEFT  */ /* 24 */ NA /* 25 */ &none            /* 26 */ &none                  /* 27 */ &kp FR_DEG               /* 28 */ &kp FR_DOT           /* 29 */ &kp FR_UNDS
 /* RIGHT */             /* 30 */ &trans           /* 31 */ &kp KP_N1              /* 32 */ &kp KP_N2                /* 33 */ &kp KP_N3            /* 34 */ &trans                /* NA 35 */ NA
