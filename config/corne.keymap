@@ -119,6 +119,48 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       tapping-term-ms = <350>;
       bindings = <&kp FR_DLR>, <&kp FR_EURO>;
     };
+    td_f1_f6: td_f1_f6 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_f1_f6";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp F1>, <&kp F6>;
+    };
+    td_f2_f7: td_f2_f7 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_f2_f7";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp F2>, <&kp F7>;
+    };
+    td_f3_f8: td_f3_f8 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_f3_f8";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp F3>, <&kp F8>;
+    };
+    td_f4_f9: td_f4_f9 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_f4_f9";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp F4>, <&kp F9>;
+    };
+    td_f5_f10: td_f5_f10 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_f5_f10";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp F5>, <&kp F10>;
+    };
+    td_f11_f12: td_f11_f12 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_f11_f12";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp F11>, <&kp F12>;
+    };
   };
   // =====
   // MACRO
@@ -282,8 +324,8 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
     num_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &mt F2 F1        /* 02 */ &mt F4 F3              /* 03 */ &mt F6 F5                /* 04 */ &mt F8 F7            /* 05 */ &mt F10 F9
-/* RIGHT */             /* 06 */ &mt F12 F11      /* 07 */ &kp KP_N7              /* 08 */ &kp KP_N8                /* 09 */ &kp KP_N9            /* 10 */ &kp FR_EQL            /* NA 11 */ NA
+/* LEFT  */ /* 00 */ NA /* 01 */ &td_f1_f6        /* 02 */ &td_f2_f7              /* 03 */ &td_f3_f8                /* 04 */ &td_f4_f9            /* 05 */ &td_f5_f10
+/* RIGHT */             /* 06 */ &td_f11_f12      /* 07 */ &kp KP_N7              /* 08 */ &kp KP_N8                /* 09 */ &kp KP_N9            /* 10 */ &kp FR_EQL            /* NA 11 */ NA
 
 /* LEFT  */ /* 12 */ NA /* 13 */ &none            /* 14 */ &hml LSHIFT FR_PERC    /* 15 */ &hml LCTRL KP_MULTIPLY   /* 16 */ &hml LALT FR_PLUS    /* 17 */ &hml LCMD FR_MINS
 /* RIGHT */             /* 18 */ &kp KP_N0        /* 19 */ &kp KP_N4              /* 20 */ &kp KP_N5                /* 21 */ &kp KP_N6            /* 22 */ &td_slash             /* NA 23 */ NA
