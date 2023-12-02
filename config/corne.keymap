@@ -245,7 +245,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     combo_2 { // )
       timeout-ms = <30>;
       key-positions = <8 9>;
-      bindings = <&kp FR_LPRN>;
+      bindings = <&kp FR_RPRN>;
     };
 
     combo_3 { // [
