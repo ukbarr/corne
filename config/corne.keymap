@@ -347,7 +347,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
     gaming_1_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_N1         /* 02 */ &kp FR_N2             /* 03 */ &kp FR_N3          /* 04 */ &kp FR_N4          /* 05 */ &kp FR_N5
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp KP_N1         /* 02 */ &kp KP_N2             /* 03 */ &kp KP_N3          /* 04 */ &kp KP_N4          /* 05 */ &kp KP_N5
 /* RIGHT */             /* 06 */ &none             /* 07 */ &none                 /* 08 */ &none              /* 09 */ &none              /* 10 */ &none         /* NA 11 */ NA
 
 /* LEFT  */ /* 12 */ NA /* 13 */ &kp TAB           /* 14 */ &kp FR_A              /* 15 */ &kp FR_Z           /* 16 */ &kp FR_E           /* 17 */ &kp FR_R
