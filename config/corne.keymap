@@ -11,6 +11,7 @@
 #define L_BASE 0
 #define L_NAV  1
 #define L_NUM  2
+#define L_GAMING 3
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5  // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // right-hand keys
@@ -216,18 +217,23 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     
     combo_copy { // copy
       timeout-ms = <30>;
-      key-positions = <26 28>;
+      key-positions = <15 27>;
       bindings = <&kp LG(FR_C)>;
     };
     combo_cut { // cut
       timeout-ms = <30>;
-      key-positions = <26 27>;
+      key-positions = <16 28>;
       bindings = <&kp LG(FR_X)>;
     };
     combo_paste { // paste
       timeout-ms = <30>;
-      key-positions = <27 28>;
+      key-positions = <17 29>;
       bindings = <&kp LG(FR_V)>;
+    };
+    combo_paste { // gaming
+      timeout-ms = <30>;
+      key-positions = <36 37>;
+      bindings = <&to L_GAMING>;
     };
 
     // RIGHT
@@ -336,6 +342,23 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
 /* LEFT  */ /* 36 */ &none      /* 37 */ &td_l_base           /* 38 */ &trans
 /* RIGHT */ /* 39 */ &trans     /* 40 */ &td_l_base           /* 41 */ &none 
+      >;
+    };
+
+    gaming_1_layer {
+      bindings = <
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_N1         /* 02 */ &kp FR_N2             /* 03 */ &kp FR_N3          /* 04 */ &kp FR_N4          /* 05 */ &kp FR_N5
+/* RIGHT */             /* 06 */ &none             /* 07 */ &none                 /* 08 */ &none              /* 09 */ &none              /* 10 */ &none         /* NA 11 */ NA
+
+/* LEFT  */ /* 12 */ NA /* 13 */ &kp TAB           /* 14 */ &kp FR_A              /* 15 */ &kp FR_Z           /* 16 */ &kp FR_E           /* 17 */ &kp FR_R
+/* RIGHT */             /* 18 */ &none             /* 19 */ &none                 /* 20 */ &none              /* 21 */ &none              /* 22 */ &none         /* NA 23 */ NA
+
+/* LEFT  */ /* 24 */ NA /* 25 */ &kp LSHIFT        /* 26 */ &kp FR_Q              /* 27 */ &kp FR_S           /* 28 */ &kp FR_D           /* 29 */ &kp FR_F
+/* RIGHT */             /* 30 */ &none             /* 31 */ &none                 /* 32 */ &none              /* 33 */ &none              /* 34 */ &none         /* NA 35 */ NA
+
+
+/* LEFT  */ /* 36 */ &none          /* 37 */ &td_l_nav   /* 38 */ &kp SPACE
+/* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &td_l_nav   /* 41 */ &none 
       >;
     };
   };
