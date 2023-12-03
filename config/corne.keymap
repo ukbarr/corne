@@ -230,7 +230,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       key-positions = <17 29>;
       bindings = <&kp LG(FR_V)>;
     };
-    combo_paste { // gaming
+    combo_layer_gaming { // gaming
       timeout-ms = <30>;
       key-positions = <36 37>;
       bindings = <&to L_GAMING>;
