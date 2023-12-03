@@ -357,8 +357,8 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* RIGHT */             /* 30 */ &none             /* 31 */ &none                 /* 32 */ &none              /* 33 */ &none              /* 34 */ &none         /* NA 35 */ NA
 
 
-/* LEFT  */ /* 36 */ &none          /* 37 */ &td_l_nav   /* 38 */ &kp SPACE
-/* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &td_l_nav   /* 41 */ &none 
+/* LEFT  */ /* 36 */ &none          /* 37 */ &none       /* 38 */ &kp SPACE
+/* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &to L_BASE  /* 41 */ &none 
       >;
     };
   };
