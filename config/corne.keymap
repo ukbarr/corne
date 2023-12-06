@@ -72,13 +72,6 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       tapping-term-ms = <200>;
       bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>;
     };
-    td_cc: td_cc { // ç
-      compatible = "zmk,behavior-tap-dance";
-      label = "td_cc";
-      #binding-cells = <0>;
-      tapping-term-ms = <350>;
-      bindings = <&kp FR_C>, <&kp FR_CCED>;
-    };
     td_comma: td_comma { // , ;
       compatible = "zmk,behavior-tap-dance";
       label = "td_comma";
@@ -216,15 +209,15 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       bindings = <&kp FR_EACU>;
     };
     
-    combo_copy { // copy
+    combo_copy { // cut
       timeout-ms = <30>;
       key-positions = <15 27>;
-      bindings = <&kp LG(FR_C)>;
+      bindings = <&kp LG(FR_X)>;
     };
-    combo_cut { // cut
+    combo_cut { // copy
       timeout-ms = <30>;
       key-positions = <16 28>;
-      bindings = <&kp LG(FR_X)>;
+      bindings = <&kp LG(FR_C)>;
     };
     combo_paste { // paste
       timeout-ms = <30>;
@@ -303,7 +296,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_Q          /* 14 */ &hml LSHIFT FR_S      /* 15 */ &hml LCTRL FR_D    /* 16 */ &hml LALT FR_F     /* 17 */ &hml LCMD FR_G
 /* RIGHT */             /* 18 */ &hmr LCMD FR_H    /* 19 */ &hmr LALT FR_J        /* 20 */ &hmr LCTRL FR_K    /* 21 */ &hmr LSHIFT FR_L   /* 22 */ &kp FR_M         /* NA 23 */ NA
 
-/* LEFT  */ /* 24 */ NA /* 25 */ &kp ESCAPE        /* 26 */ &kp FR_W              /* 27 */ &kp FR_X           /* 28 */ &td_cc             /* 29 */ &mt INSERT TAB
+/* LEFT  */ /* 24 */ NA /* 25 */ &kp ESCAPE        /* 26 */ &kp FR_W              /* 27 */ &kp FR_X           /* 28 */ &mt FR_CCED FR_C   /* 29 */ &mt INSERT TAB
 /* RIGHT */             /* 30 */ &kp BACKSPACE     /* 31 */ &kp FR_V              /* 32 */ &kp FR_B           /* 33 */ &kp FR_N           /* 34 */ &kp DELETE       /* NA 35 */ NA
 
 
