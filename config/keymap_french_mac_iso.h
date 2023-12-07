@@ -24,5 +24,5 @@
 #define FRM_TILD RA(FR_N)    // ~ (dead)
 #define FRM_LBRC LS(RA(N5)) // [
 #define FRM_RBRC LS(RA(MINUS)) // ]
-#define FRM_PIPE LS(RA(RACL))    // |
+#define FRM_PIPE LS(RA(FR_L))    // |
 #define FRM_BSLS LS(RA(FR_COLN)) // (backslash)
