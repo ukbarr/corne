@@ -513,7 +513,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* LEFT  */ /* 00 */ NA /* 01 */ &kp FRM_AT             /* 02 */ &td_mquestion         /* 03 */ &td_mhash              /* 04 */ &td_comma              /* 05 */ &td_mquote
 /* RIGHT */             /* 06 */ &mc_bt0                /* 07 */ &mc_bt1               /* 08 */ &kp C_VOL_DN           /* 09 */ &kp C_VOL_UP           /* 10 */ &kp C_MUTE          /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &td_mdollars            /* 14 */ &hml LSHIFT FRM_PIPE /* 15 */ &hml LCTRL FR_COLN     /* 16 */ &hml LALT FR_AMPR      /* 17 */ &hml LCMD FR_DQUO
+/* LEFT  */ /* 12 */ NA /* 13 */ &td_mdollars           /* 14 */ &hml LSHIFT FRM_PIPE  /* 15 */ &hml LCTRL FR_COLN     /* 16 */ &hml LALT FR_AMPR      /* 17 */ &hml LCMD FR_DQUO
 /* RIGHT */             /* 18 */ &kp HOME               /* 19 */ &kp PAGE_UP           /* 20 */ &kp UP                 /* 21 */ &kp PAGE_DOWN          /* 22 */ &kp END             /* NA 23 */ NA
 
 /* LEFT  */ /* 24 */ NA /* 25 */ &trans                 /* 26 */ &none                 /* 27 */ &mt FR_DIAE FR_CIRC    /* 28 */ &none                  /* 29 */ &none
