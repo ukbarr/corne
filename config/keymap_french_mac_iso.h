@@ -8,21 +8,21 @@
 // clang-format off
 
 // Aliases
-#define FRM_AT   GRAVE  // @
+#define FRM_AT   LS(N2)  // @
 #define FRM_EXLM N8    // !
 #define FRM_MINS EQUAL  // -
-#define FRM_GRV  STAR // `
-#define FRM_LABK LT // <
+#define FRM_GRV  LS(N3) // `
+#define FRM_LABK GRAVE // <
 #define FRM_EQL  SLASH // =
-#define FRM_HASH LS(FRM_AT)   // #
+#define FRM_HASH  HASH  // #
 #define FRM_UNDS LS(EQUAL) // _
-#define FRM_RABK LS(LT) // >
+#define FRM_RABK LS(GRAVE) // >
 #define FRM_PLUS LS(SLASH)  // +
 #define FRM_LCBR RA(N5) // {
 #define FRM_RCBR RA(MINUS) // }
 #define FRM_EURO RA(RBKT)  // €
 #define FRM_TILD RA(FR_N)    // ~ (dead)
 #define FRM_LBRC LS(RA(N5)) // [
-#define FRM_RBRC LS(RA(MINUS)) // ]
+#define FRM_RBRC RPAR // ]
 #define FRM_PIPE LS(RA(FR_L))    // |
 #define FRM_BSLS LS(RA(FR_COLN)) // (backslash)
