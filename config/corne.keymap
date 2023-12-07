@@ -1,11 +1,10 @@
 #include <behaviors.dtsi>
-// #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
 #include "keymap_french.h"
+#include "keymap_french_mac_iso.h"
 #include "helper.h"
 #include "keypos_42keys.h"
-// #include "french_unicode.dtsi"
 
 #define NA &none
 #define L_BASE 0
@@ -13,6 +12,9 @@
 #define L_NUM  2
 #define L_GAMING 3
 #define L_GAMING_2 4
+#define LM_BASE 5
+#define LM_NAV  6
+#define LM_NUM  7
 
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LT5 LM0 LM1 LM2 LM3 LM4 LM5 LB0 LB1 LB2 LB3 LB4 LB5  // left-hand keys
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RT5 RM0 RM1 RM2 RM3 RM4 RM5 RB0 RB1 RB2 RB3 RB4 RB5  // right-hand keys
@@ -64,13 +66,6 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       #binding-cells = <0>;
       tapping-term-ms = <200>;
       bindings = <&mo L_NUM>, <&to L_NUM>;
-    };
-    td_bt: td_bt {
-      compatible = "zmk,behavior-tap-dance";
-      label = "td_bt";
-      #binding-cells = <0>;
-      tapping-term-ms = <200>;
-      bindings = <&bt BT_SEL 0>, <&bt BT_SEL 1>;
     };
     td_comma: td_comma { // , ;
       compatible = "zmk,behavior-tap-dance";
@@ -156,6 +151,63 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       tapping-term-ms = <350>;
       bindings = <&kp F11>, <&kp F12>;
     };
+    // mac
+    td_lm_base: td_lm_base {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_lm_base";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&mo LM_BASE>, <&to LM_BASE>;
+    };
+    td_lm_nav: td_lm_nav {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_lm_nav";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&mo LM_NAV>, <&to LM_NAV>;
+    };
+    td_lm_num: td_lm_num {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_lm_num";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      bindings = <&mo LM_NUM>, <&to LM_NUM>;
+    };
+    td_mquestion: td_mquestion { // ? !
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_mquestion";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp FR_QUES>, <&kp FRM_EXLM>;
+    };
+    td_mhash: td_mhash { // # ~
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_mhash";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp FRM_HASH>, <&kp FRM_TILD>;
+    };
+    td_mslash: td_mslash { // # ~
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_mslash";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp FR_SLSH>, <&kp FRM_BSLS>;
+    };
+    td_mquote: td_mquote { // ' `
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_mquote";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp FR_QUOT>, <&kp FRM_GRV>;
+    };
+    td_mdollars: td_mdollars { // $ €
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_mdollars";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp FR_DLR>, <&kp FRM_EURO>;
+    };
   };
   // =====
   // MACRO
@@ -183,6 +235,24 @@ ZMK_BEHAVIOR(hmr, hold_tap,
         , <&macro_wait_time 50>
         , <&macro_tap &kp KP_N2>
         , <&macro_release &kp LALT>
+        ;
+    };
+    mc_bt0: mc_bt0 {
+      label = "mc_bt0";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+        = <&bt BT_SEL 0>
+        , <&to L_BASE>
+        ;
+    };
+    mc_bt1: mc_bt1 {
+      label = "mc_bt1";
+      compatible = "zmk,behavior-macro";
+      #binding-cells = <0>;
+      bindings
+        = <&bt BT_SEL 1>
+        , <&to LM_BASE>
         ;
     };
   };
@@ -252,33 +322,81 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       timeout-ms = <30>;
       key-positions = <19 20>;
       bindings = <&kp FR_LBRC>;
+      layers = <0 1 2>;
     };
     combo_4 { // ]
       timeout-ms = <30>;
       key-positions = <20 21>;
       bindings = <&kp FR_RBRC>;
+      layers = <0 1 2>;
     };
 
     combo_5 { // {
       timeout-ms = <30>;
       key-positions = <31 32>;
       bindings = <&kp FR_LCBR>;
+      layers = <0 1 2>;
     };
     combo_6 { // }
       timeout-ms = <30>;
       key-positions = <32 33>;
       bindings = <&kp FR_RCBR>;
+      layers = <0 1 2>;
     };
 
     combo_7 { // <
       timeout-ms = <30>;
       key-positions = <20 31>;
       bindings = <&mc_lt>;
+      layers = <0 1 2>;
     };
     combo_8 { // >
       timeout-ms = <30>;
       key-positions = <20 33>;
       bindings = <&mc_gt>;
+      layers = <0 1 2>;
+    };
+
+    // mac
+
+    // RIGHT
+    combo_3m { // [
+      timeout-ms = <30>;
+      key-positions = <19 20>;
+      bindings = <&kp FRM_LBRC>;
+      layers = <5 6 7>;
+    };
+    combo_4m { // ]
+      timeout-ms = <30>;
+      key-positions = <20 21>;
+      bindings = <&kp FRM_RBRC>;
+      layers = <5 6 7>;
+    };
+
+    combo_5m { // {
+      timeout-ms = <30>;
+      key-positions = <31 32>;
+      bindings = <&kp FRM_LCBR>;
+      layers = <5 6 7>;
+    };
+    combo_6m { // }
+      timeout-ms = <30>;
+      key-positions = <32 33>;
+      bindings = <&kp FRM_RCBR>;
+      layers = <5 6 7>;
+    };
+
+    combo_7m { // <
+      timeout-ms = <30>;
+      key-positions = <20 31>;
+      bindings = <&kp FRM_LABK>;
+      layers = <5 6 7>;
+    };
+    combo_8m { // >
+      timeout-ms = <30>;
+      key-positions = <20 33>;
+      bindings = <&kp FRM_RABK>;
+      layers = <5 6 7>;
     };
   };
 
@@ -308,7 +426,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     nav_layer {
       bindings = <
 /* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_AT              /* 02 */ &td_question        /* 03 */ &td_hash               /* 04 */ &td_comma              /* 05 */ &td_quote
-/* RIGHT */             /* 06 */ &bt BT_SEL 0           /* 07 */ &bt BT_SEL 1        /* 08 */ &kp C_VOL_DN           /* 09 */ &kp C_VOL_UP           /* 10 */ &kp C_MUTE          /* NA 11 */ NA
+/* RIGHT */             /* 06 */ &mc_bt0                /* 07 */ &mc_bt1             /* 08 */ &kp C_VOL_DN           /* 09 */ &kp C_VOL_UP           /* 10 */ &kp C_MUTE          /* NA 11 */ NA
 
 /* LEFT  */ /* 12 */ NA /* 13 */ &td_dollars            /* 14 */ &hml LSHIFT FR_PIPE /* 15 */ &hml LCTRL FR_COLN     /* 16 */ &hml LALT FR_AMPR      /* 17 */ &hml LCMD FR_DQUO
 /* RIGHT */             /* 18 */ &kp HOME               /* 19 */ &kp PAGE_UP         /* 20 */ &kp UP                 /* 21 */ &kp PAGE_DOWN          /* 22 */ &kp END             /* NA 23 */ NA
@@ -370,6 +488,57 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
 /* LEFT  */ /* 36 */ &kp ESC        /* 37 */ &none       /* 38 */ &kp SPACE
 /* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &to L_BASE  /* 41 */ &none 
+      >;
+    };
+
+    mac_base_layer {
+      bindings = <
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_A          /* 02 */ &kp FR_Z              /* 03 */ &kp FR_E           /* 04 */ &kp FR_R           /* 05 */ &kp FR_T
+/* RIGHT */             /* 06 */ &kp FR_Y          /* 07 */ &kp FR_U              /* 08 */ &kp FR_I           /* 09 */ &kp FR_O           /* 10 */ &kp FR_P         /* NA 11 */ NA
+
+/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_Q          /* 14 */ &hml LSHIFT FR_S      /* 15 */ &hml LCTRL FR_D    /* 16 */ &hml LALT FR_F     /* 17 */ &hml LCMD FR_G
+/* RIGHT */             /* 18 */ &hmr LCMD FR_H    /* 19 */ &hmr LALT FR_J        /* 20 */ &hmr LCTRL FR_K    /* 21 */ &hmr LSHIFT FR_L   /* 22 */ &kp FR_M         /* NA 23 */ NA
+
+/* LEFT  */ /* 24 */ NA /* 25 */ &kp ESCAPE        /* 26 */ &kp FR_W              /* 27 */ &kp FR_X           /* 28 */ &mt FR_CCED FR_C   /* 29 */ &mt INSERT TAB
+/* RIGHT */             /* 30 */ &kp BACKSPACE     /* 31 */ &kp FR_V              /* 32 */ &kp FR_B           /* 33 */ &kp FR_N           /* 34 */ &kp DELETE       /* NA 35 */ NA
+
+
+/* LEFT  */ /* 36 */ &td_lm_num     /* 37 */ &td_lm_nav  /* 38 */ &kp SPACE
+/* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &td_lm_nav  /* 41 */ &td_lm_num 
+      >;
+    };
+ 
+    mac_nav_layer {
+      bindings = <
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp FRM_AT             /* 02 */ &td_mquestion         /* 03 */ &td_mhash              /* 04 */ &td_comma              /* 05 */ &td_mquote
+/* RIGHT */             /* 06 */ &mc_bt0                /* 07 */ &mc_bt1               /* 08 */ &kp C_VOL_DN           /* 09 */ &kp C_VOL_UP           /* 10 */ &kp C_MUTE          /* NA 11 */ NA
+
+/* LEFT  */ /* 12 */ NA /* 13 */ &td_mdollars            /* 14 */ &hml LSHIFT FRM_PIPE /* 15 */ &hml LCTRL FR_COLN     /* 16 */ &hml LALT FR_AMPR      /* 17 */ &hml LCMD FR_DQUO
+/* RIGHT */             /* 18 */ &kp HOME               /* 19 */ &kp PAGE_UP           /* 20 */ &kp UP                 /* 21 */ &kp PAGE_DOWN          /* 22 */ &kp END             /* NA 23 */ NA
+
+/* LEFT  */ /* 24 */ NA /* 25 */ &trans                 /* 26 */ &none                 /* 27 */ &mt FR_DIAE FR_CIRC    /* 28 */ &none                  /* 29 */ &none
+/* RIGHT */             /* 30 */ &trans                 /* 31 */ &kp LEFT              /* 32 */ &kp DOWN               /* 33 */ &kp RIGHT              /* 34 */ &trans              /* NA 35 */ NA
+
+
+/* LEFT  */ /* 36 */ &none      /* 37 */ &td_lm_base           /* 38 */ &trans
+/* RIGHT */ /* 39 */ &trans     /* 40 */ &td_lm_base           /* 41 */ &none 
+      >;
+    };
+
+    mac_num_layer {
+      bindings = <
+/* LEFT  */ /* 00 */ NA /* 01 */ &td_f1_f6        /* 02 */ &td_f2_f7              /* 03 */ &td_f3_f8                /* 04 */ &td_f4_f9            /* 05 */ &td_f5_f10
+/* RIGHT */             /* 06 */ &td_f11_f12      /* 07 */ &kp KP_N7              /* 08 */ &kp KP_N8                /* 09 */ &kp KP_N9            /* 10 */ &kp FRM_EQL           /* NA 11 */ NA
+
+/* LEFT  */ /* 12 */ NA /* 13 */ &bt BT_CLR       /* 14 */ &hml LSHIFT FR_PERC    /* 15 */ &hml LCTRL KP_MULTIPLY   /* 16 */ &hml LALT FRM_PLUS   /* 17 */ &hml LCMD FRM_MINS
+/* RIGHT */             /* 18 */ &kp KP_N0        /* 19 */ &kp KP_N4              /* 20 */ &kp KP_N5                /* 21 */ &kp KP_N6            /* 22 */ &td_mslash            /* NA 23 */ NA
+
+/* LEFT  */ /* 24 */ NA /* 25 */ &trans           /* 26 */ &none                  /* 27 */ &kp FR_DEG               /* 28 */ &kp FR_DOT           /* 29 */ &kp FRM_UNDS
+/* RIGHT */             /* 30 */ &trans           /* 31 */ &kp KP_N1              /* 32 */ &kp KP_N2                /* 33 */ &kp KP_N3            /* 34 */ &trans                /* NA 35 */ NA
+
+
+/* LEFT  */ /* 36 */ &none      /* 37 */ &td_lm_base           /* 38 */ &trans
+/* RIGHT */ /* 39 */ &trans     /* 40 */ &td_lm_base           /* 41 */ &none 
       >;
     };
   };
