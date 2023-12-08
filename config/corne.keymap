@@ -516,7 +516,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* LEFT  */ /* 12 */ NA /* 13 */ &td_mdollars           /* 14 */ &hml LSHIFT FRM_PIPE  /* 15 */ &hml LCTRL FR_COLN     /* 16 */ &hml LALT FR_AMPR      /* 17 */ &hml LCMD FR_DQUO
 /* RIGHT */             /* 18 */ &kp HOME               /* 19 */ &kp PAGE_UP           /* 20 */ &kp UP                 /* 21 */ &kp PAGE_DOWN          /* 22 */ &kp END             /* NA 23 */ NA
 
-/* LEFT  */ /* 24 */ NA /* 25 */ &trans                 /* 26 */ &kp N2                 /* 27 */ &mt FR_DIAE FR_CIRC    /* 28 */ &N3                  /* 29 */ &kp KP_NUMLOCK
+/* LEFT  */ /* 24 */ NA /* 25 */ &trans                 /* 26 */ &kp N2                 /* 27 */ &mt FR_DIAE FR_CIRC    /* 28 */ &kp N3                  /* 29 */ &kp KP_NUMLOCK
 /* RIGHT */             /* 30 */ &trans                 /* 31 */ &kp LEFT              /* 32 */ &kp DOWN               /* 33 */ &kp RIGHT              /* 34 */ &trans              /* NA 35 */ NA
 
 
