@@ -17,6 +17,6 @@
 #define FRM_UNDS LS(EQUAL) // _
 #define FRM_PLUS LS(SLASH)  // +
 #define FRM_EURO RA(RBKT)  // €
-#define FRM_TILD    // ~ (dead)
+#define FRM_TILD N5   // ~ (dead)
 #define FRM_PIPE LS(RA(FR_L))    // |
 #define FRM_BSLS LS(RA(FR_COLN)) // (backslash)
