@@ -13,7 +13,7 @@
 #define FRM_MINS EQUAL  // -
 #define FRM_GRV  NON_US_HASH // `
 #define FRM_EQL  SLASH // =
-#define FRM_HASH   // #
+#define FRM_HASH N4  // #
 #define FRM_UNDS LS(EQUAL) // _
 #define FRM_PLUS LS(SLASH)  // +
 #define FRM_EURO RA(RBKT)  // €
