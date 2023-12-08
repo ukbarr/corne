@@ -511,12 +511,12 @@ ZMK_BEHAVIOR(hmr, hold_tap,
     mac_nav_layer {
       bindings = <
 /* LEFT  */ /* 00 */ NA /* 01 */ &kp FRM_AT             /* 02 */ &td_mquestion         /* 03 */ &td_mhash              /* 04 */ &td_comma              /* 05 */ &td_mquote
-/* RIGHT */             /* 06 */ &mc_bt0                /* 07 */ &mc_bt1               /* 08 */ &kp LEFT_BRACKET              /* 09 */ &kp BACKSLASH          /* 10 */ &kp SINGLE_QUOTE          /* NA 11 */ NA
+/* RIGHT */             /* 06 */ &mc_bt0                /* 07 */ &mc_bt1               /* 08 */ &kp RIGHT_BRACKET              /* 09 */ &kp GRAVE          /* 10 */ &kp SEMICOLON          /* NA 11 */ NA
 
 /* LEFT  */ /* 12 */ NA /* 13 */ &td_mdollars           /* 14 */ &hml LSHIFT FRM_PIPE  /* 15 */ &hml LCTRL FR_COLN     /* 16 */ &hml LALT FR_AMPR      /* 17 */ &hml LCMD FR_DQUO
 /* RIGHT */             /* 18 */ &kp HOME               /* 19 */ &kp PAGE_UP           /* 20 */ &kp UP                 /* 21 */ &kp PAGE_DOWN          /* 22 */ &kp END             /* NA 23 */ NA
 
-/* LEFT  */ /* 24 */ NA /* 25 */ &trans                 /* 26 */ &none                 /* 27 */ &mt FR_DIAE FR_CIRC    /* 28 */ &none                  /* 29 */ &none
+/* LEFT  */ /* 24 */ NA /* 25 */ &trans                 /* 26 */ &kp BACKSLASH                 /* 27 */ &mt FR_DIAE FR_CIRC    /* 28 */ &none                  /* 29 */ &none
 /* RIGHT */             /* 30 */ &trans                 /* 31 */ &kp LEFT              /* 32 */ &kp DOWN               /* 33 */ &kp RIGHT              /* 34 */ &trans              /* NA 35 */ NA
 
 
