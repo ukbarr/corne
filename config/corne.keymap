@@ -449,7 +449,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
     gaming_1_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &kp TAB           /* 02 */ &kp KP_N1             /* 03 */ &kp KP_N2          /* 04 */ &kp KP_N3          /* 05 */ &kp KP_N4
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp TAB           /* 02 */ &kp N1                /* 03 */ &kp N2             /* 04 */ &kp N3             /* 05 */ &kp N4
 /* RIGHT */             /* 06 */ &none             /* 07 */ &none                 /* 08 */ &none              /* 09 */ &none              /* 10 */ &none         /* NA 11 */ NA
 
 /* LEFT  */ /* 12 */ NA /* 13 */ &kp LSHIFT        /* 14 */ &kp FR_A              /* 15 */ &kp FR_Z           /* 16 */ &kp FR_E           /* 17 */ &kp FR_R
@@ -466,10 +466,10 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
     gaming_2_layer {
       bindings = <
-/* LEFT  */ /* 00 */ NA /* 01 */ &kp KP_N5         /* 02 */ &kp KP_N6             /* 03 */ &kp KP_N7          /* 04 */ &kp KP_N8          /* 05 */ &kp KP_N9
+/* LEFT  */ /* 00 */ NA /* 01 */ &kp N5            /* 02 */ &kp N6                /* 03 */ &kp N7             /* 04 */ &kp N8             /* 05 */ &kp N9
 /* RIGHT */             /* 06 */ &none             /* 07 */ &none                 /* 08 */ &none              /* 09 */ &none              /* 10 */ &none         /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_T          /* 14 */ &kp FR_Y              /* 15 */ &kp FR_U           /* 16 */ &kp FR_I           /* 17 */ &kp FR_O
+/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_T          /* 14 */ &kp FR_Y              /* 15 */ &kp FR_U           /* 16 */ &kp FR_I           /* 17 */ &kp NO
 /* RIGHT */             /* 18 */ &none             /* 19 */ &none                 /* 20 */ &none              /* 21 */ &none              /* 22 */ &none         /* NA 23 */ NA
 
 /* LEFT  */ /* 24 */ NA /* 25 */ &kp FR_G          /* 26 */ &kp FR_H              /* 27 */ &kp FR_J           /* 28 */ &kp FR_K           /* 29 */ &kp FR_L
