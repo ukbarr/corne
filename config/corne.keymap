@@ -469,7 +469,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* LEFT  */ /* 00 */ NA /* 01 */ &kp N5            /* 02 */ &kp N6                /* 03 */ &kp N7             /* 04 */ &kp N8             /* 05 */ &kp N9
 /* RIGHT */             /* 06 */ &none             /* 07 */ &none                 /* 08 */ &none              /* 09 */ &none              /* 10 */ &none         /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_T          /* 14 */ &kp FR_Y              /* 15 */ &kp FR_U           /* 16 */ &kp FR_I           /* 17 */ &kp NO
+/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_T          /* 14 */ &kp FR_Y              /* 15 */ &kp FR_U           /* 16 */ &kp FR_I           /* 17 */ &kp N0
 /* RIGHT */             /* 18 */ &none             /* 19 */ &none                 /* 20 */ &none              /* 21 */ &none              /* 22 */ &none         /* NA 23 */ NA
 
 /* LEFT  */ /* 24 */ NA /* 25 */ &kp FR_G          /* 26 */ &kp FR_H              /* 27 */ &kp FR_J           /* 28 */ &kp FR_K           /* 29 */ &kp FR_L
