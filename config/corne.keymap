@@ -224,6 +224,13 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       tapping-term-ms = <350>;
       bindings = <&kp GRAVE>, <&kp LS(GRAVE)>;
     };
+    td_c: td_c { // c ç
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_mltgt";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&kp FR_C>, <&kp FR_CCED>;
+    };
   };
   // =====
   // MACRO
@@ -404,7 +411,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_Q          /* 14 */ &hml LSHIFT FR_S      /* 15 */ &hml LCTRL FR_D    /* 16 */ &hml LALT FR_F     /* 17 */ &hml LCMD FR_G
 /* RIGHT */             /* 18 */ &hmr LCMD FR_H    /* 19 */ &hmr LALT FR_J        /* 20 */ &hmr LCTRL FR_K    /* 21 */ &hmr LSHIFT FR_L   /* 22 */ &kp FR_M         /* NA 23 */ NA
 
-/* LEFT  */ /* 24 */ NA /* 25 */ &kp ESCAPE        /* 26 */ &kp FR_W              /* 27 */ &kp FR_X           /* 28 */ &mt FR_CCED FR_C   /* 29 */ &mt INSERT TAB
+/* LEFT  */ /* 24 */ NA /* 25 */ &kp ESCAPE        /* 26 */ &kp FR_W              /* 27 */ &kp FR_X           /* 28 */ &td_c              /* 29 */ &mt INSERT TAB
 /* RIGHT */             /* 30 */ &kp BACKSPACE     /* 31 */ &kp FR_V              /* 32 */ &kp FR_B           /* 33 */ &kp FR_N           /* 34 */ &kp DELETE       /* NA 35 */ NA
 
 
