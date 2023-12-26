@@ -413,8 +413,8 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* LEFT  */ /* 24 */ NA /* 25 */ &kp ESCAPE        /* 26 */ &kp FR_W              /* 27 */ &kp FR_X           /* 28 */ &kp FR_C           /* 29 */ &mt INSERT TAB
 /* RIGHT */             /* 30 */ &kp BACKSPACE     /* 31 */ &kp FR_V              /* 32 */ &kp FR_B           /* 33 */ &kp FR_N           /* 34 */ &kp DELETE       /* NA 35 */ NA
 
-
-/* LEFT  */ /* 36 */ &td_l_num      /* 37 */ &td_l_nav   /* 38 */ &kp SPACE
+/* &td_l_num */
+/* LEFT  */ /* 36 */ &kp LSHIFT     /* 37 */ &td_l_nav   /* 38 */ &kp SPACE
 /* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &td_l_nav   /* 41 */ &td_l_num 
       >;
     };
@@ -499,7 +499,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* RIGHT */             /* 30 */ &kp BACKSPACE     /* 31 */ &kp FR_V              /* 32 */ &kp FR_B           /* 33 */ &kp FR_N           /* 34 */ &kp DELETE       /* NA 35 */ NA
 
 
-/* LEFT  */ /* 36 */ &td_lm_num     /* 37 */ &td_lm_nav  /* 38 */ &kp SPACE
+/* LEFT  */ /* 36 */ &kp LSHIFT     /* 37 */ &td_lm_nav  /* 38 */ &kp SPACE
 /* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &td_lm_nav  /* 41 */ &td_lm_num 
       >;
     };
