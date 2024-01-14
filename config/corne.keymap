@@ -159,6 +159,20 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       tapping-term-ms = <350>;
       bindings = <&kp F11>, <&kp F12>;
     };
+    td_bt0: td_bt0 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_bt0";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&bt BT_SEL 0>, <&to L_BASE>;
+    };
+    td_bt1: td_bt1 {
+      compatible = "zmk,behavior-tap-dance";
+      label = "td_bt1";
+      #binding-cells = <0>;
+      tapping-term-ms = <350>;
+      bindings = <&bt BT_SEL 1>, <&to LM_BASE>;
+    };
 
     // mac
     td_lm_base: td_lm_base {
@@ -251,24 +265,6 @@ ZMK_BEHAVIOR(hmr, hold_tap,
         , <&macro_wait_time 50>
         , <&macro_tap &kp KP_N2>
         , <&macro_release &kp LALT>
-        ;
-    };
-    mc_bt0: mc_bt0 {
-      label = "mc_bt0";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings
-        = <&bt BT_SEL 0>
-        , <&to L_BASE>
-        ;
-    };
-    mc_bt1: mc_bt1 {
-      label = "mc_bt1";
-      compatible = "zmk,behavior-macro";
-      #binding-cells = <0>;
-      bindings
-        = <&bt BT_SEL 1>
-        , <&to LM_BASE>
         ;
     };
   };
