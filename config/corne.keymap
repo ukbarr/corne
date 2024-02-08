@@ -312,9 +312,14 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       key-positions = <17 29>;
       bindings = <&kp LG(FR_V)>;
     };
-    combo_layer_gaming { // gaming
+    combo_left_lnum { // layer num
       timeout-ms = <30>;
       key-positions = <36 37>;
+      bindings = <&td_lm_num>;
+    };
+    combo_layer_gaming { // gaming
+      timeout-ms = <30>;
+      key-positions = <37 38>;
       bindings = <&to L_GAMING>;
     };
 
@@ -360,6 +365,12 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       key-positions = <32 33>;
       bindings = <&kp FR_RCBR>;
       layers = <0 1 2>;
+    };
+
+    combo_left_lnum { // layer num
+      timeout-ms = <30>;
+      key-positions = <40 41>;
+      bindings = <&td_lm_num>;
     };
 
     // mac
@@ -411,7 +422,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
 /* &td_l_num */
 /* LEFT  */ /* 36 */ &kp LSHIFT     /* 37 */ &td_l_nav   /* 38 */ &kp SPACE
-/* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &td_l_nav   /* 41 */ &td_l_num 
+/* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &td_l_nav   /* 41 */ &kp LSHIFT 
       >;
     };
  
@@ -496,7 +507,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 
 
 /* LEFT  */ /* 36 */ &kp LSHIFT     /* 37 */ &td_lm_nav  /* 38 */ &kp SPACE
-/* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &td_lm_nav  /* 41 */ &td_lm_num 
+/* RIGHT */ /* 39 */ &kp ENTER      /* 40 */ &td_lm_nav  /* 41 */ &kp LSHIFT 
       >;
     };
  
