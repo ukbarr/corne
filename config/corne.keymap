@@ -312,10 +312,11 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       key-positions = <17 29>;
       bindings = <&kp LG(FR_V)>;
     };
-    combo_left_lnum { // layer num
+    combo_left_l_num { // layer num
       timeout-ms = <30>;
       key-positions = <36 37>;
-      bindings = <&td_lm_num>;
+      bindings = <&td_l_num>;
+      layers = <0 1 2>;
     };
     combo_layer_gaming { // gaming
       timeout-ms = <30>;
@@ -366,13 +367,22 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       bindings = <&kp FR_RCBR>;
       layers = <0 1 2>;
     };
-    combo_right_lnum { // layer num
+    combo_right_l_num { // layer num
       timeout-ms = <30>;
       key-positions = <40 41>;
-      bindings = <&td_lm_num>;
+      bindings = <&td_l_num>;
+      layers = <0 1 2>;
     };
     
     // mac
+
+    // LEFT
+    combo_left_lm_num { // layer num
+      timeout-ms = <30>;
+      key-positions = <36 37>;
+      bindings = <&td_lm_num>;
+      layers = <5 6 7>;
+    };
 
     // RIGHT
     combo_3m { // [
@@ -398,6 +408,12 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       timeout-ms = <30>;
       key-positions = <32 33>;
       bindings = <&kp RA(MINUS)>;
+      layers = <5 6 7>;
+    };
+    combo_right_lm_num { // layer num
+      timeout-ms = <30>;
+      key-positions = <40 41>;
+      bindings = <&td_lm_num>;
       layers = <5 6 7>;
     };
   };
