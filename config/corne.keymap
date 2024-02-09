@@ -295,8 +295,7 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       key-positions = <27 28>;
       bindings = <&kp FR_CCED>;
     };
-    
-   
+       
     combo_copy { // cut
       timeout-ms = <30>;
       key-positions = <15 27>;
@@ -311,12 +310,6 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       timeout-ms = <30>;
       key-positions = <17 29>;
       bindings = <&kp LG(FR_V)>;
-    };
-    combo_left_l_num { // layer num
-      timeout-ms = <30>;
-      key-positions = <36 37>;
-      bindings = <&td_l_num>;
-      layers = <0 1 2>;
     };
     combo_layer_gaming { // gaming
       timeout-ms = <30>;
@@ -367,22 +360,10 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       bindings = <&kp FR_RCBR>;
       layers = <0 1 2>;
     };
-    combo_right_l_num { // layer num
-      timeout-ms = <30>;
-      key-positions = <40 41>;
-      bindings = <&td_l_num>;
-      layers = <0 1 2>;
-    };
     
     // mac
 
     // LEFT
-    combo_left_lm_num { // layer num
-      timeout-ms = <30>;
-      key-positions = <36 37>;
-      bindings = <&td_lm_num>;
-      layers = <5 6 7>;
-    };
 
     // RIGHT
     combo_3m { // [
@@ -410,12 +391,6 @@ ZMK_BEHAVIOR(hmr, hold_tap,
       bindings = <&kp RA(MINUS)>;
       layers = <5 6 7>;
     };
-    combo_right_lm_num { // layer num
-      timeout-ms = <30>;
-      key-positions = <40 41>;
-      bindings = <&td_lm_num>;
-      layers = <5 6 7>;
-    };
   };
 
   // ======
@@ -429,8 +404,8 @@ ZMK_BEHAVIOR(hmr, hold_tap,
 /* LEFT  */ /* 00 */ NA /* 01 */ &kp FR_A          /* 02 */ &kp FR_Z              /* 03 */ &kp FR_E           /* 04 */ &kp FR_R           /* 05 */ &kp FR_T
 /* RIGHT */             /* 06 */ &kp FR_Y          /* 07 */ &kp FR_U              /* 08 */ &kp FR_I           /* 09 */ &kp FR_O           /* 10 */ &kp FR_P         /* NA 11 */ NA
 
-/* LEFT  */ /* 12 */ NA /* 13 */ &kp FR_Q          /* 14 */ &hml LSHIFT FR_S      /* 15 */ &hml LCTRL FR_D    /* 16 */ &hml LALT FR_F     /* 17 */ &hml LCMD FR_G
-/* RIGHT */             /* 18 */ &hmr LCMD FR_H    /* 19 */ &hmr LALT FR_J        /* 20 */ &hmr LCTRL FR_K    /* 21 */ &hmr LSHIFT FR_L   /* 22 */ &kp FR_M         /* NA 23 */ NA
+/* LEFT  */ /* 12 */ NA /* 13 */ &hml &mo L_NUM FR_Q          /* 14 */ &hml LSHIFT FR_S      /* 15 */ &hml LCTRL FR_D    /* 16 */ &hml LALT FR_F     /* 17 */ &hml LCMD FR_G
+/* RIGHT */             /* 18 */ &hmr LCMD FR_H    /* 19 */ &hmr LALT FR_J        /* 20 */ &hmr LCTRL FR_K    /* 21 */ &hmr LSHIFT FR_L   /* 22 */ &hmr &mo L_NUM FR_M         /* NA 23 */ NA
 
 /* LEFT  */ /* 24 */ NA /* 25 */ &kp ESCAPE        /* 26 */ &kp FR_W              /* 27 */ &kp FR_X           /* 28 */ &kp FR_C           /* 29 */ &mt INSERT TAB
 /* RIGHT */             /* 30 */ &kp BACKSPACE     /* 31 */ &kp FR_V              /* 32 */ &kp FR_B           /* 33 */ &kp FR_N           /* 34 */ &kp DELETE       /* NA 35 */ NA
